@@ -1,5 +1,5 @@
 <template>
-  <div class="hello">
+  <div class="hello" :style="{ '--red': red }">
     <h1>{{ msg }}</h1>
     <p>
       For a guide and recipes on how to configure / customize this project,<br>
@@ -37,6 +37,11 @@ export default {
   name: 'HelloWorld',
   props: {
     msg: String
+  },
+  data() {
+    return {
+      red: 'red'
+    }
   }
 }
 </script>
@@ -45,6 +50,7 @@ export default {
 <style scoped lang="less">
 h3 {
   margin: 40px 0 0;
+  color: var(--red);
 }
 ul {
   list-style-type: none;
